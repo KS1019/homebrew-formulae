@@ -7,8 +7,10 @@ class Hondana < Formula
 
     depends_on :xcode => ["10.0", :build]
   
+    uses_from_macos "swift"
     def install
-      system "make", "install", "prefix=#{prefix}"
+      system "swift", "build", "--disable-sandbox", "-c", "release"
+      bin.install ".build/release/hondana"
     end
   
     test do
