@@ -8,7 +8,7 @@ class Docc < Formula
     uses_from_macos "swift"
     def install
       system "swift", "build", "--disable-sandbox", "-c", "release"
-      bin.install ".build/release/hondana"
+      bin.install ".build/release/docc"
     end
   
     test do
