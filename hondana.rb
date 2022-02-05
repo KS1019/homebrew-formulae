@@ -1,7 +1,7 @@
 class Hondana < Formula
     desc "CLI tool to manage your bookmarklets"
     homepage "https://github.com/KS1019/Hondana"
-    url "https://github.com/KS1019/Hondana/archive/0.0.5.tar.gz"
+    url "https://github.com/KS1019/Hondana/archive/refs/tags/0.0.6-alpha.tar.gz"
     sha256 ""
     tag ""
     revision ""
