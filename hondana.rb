@@ -13,7 +13,7 @@ class Hondana < Formula
       system "swift", "build", "--disable-sandbox", "-c", "release"
       bin.install ".build/release/hondana"
       hondana = bin/"hondana"
-      if hondana.exist? && hondana.excutable?
+      if hondana.exist? && hondana.executable?
           output = Utils.safe_popen_read(hondana, '--generate-completion-script', 'zsh')
           (zsh_completion/'_hondana').write output
           output = Utils.safe_popen_read(hondana, '--generate-completion-script', 'bash')
