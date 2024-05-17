@@ -4,7 +4,7 @@ cask "eikana" do
   name "eikana"
   desc "Input Mode Switcher for Japanese and English / USキーボードで日英入力切り替えを行うアプリ"
   homepage "https://github.com/KS1019/eikana"
-  sha256 "2602acfb02cdeee7cc2989bac3d562bacb326aab7a4c3bbdb32df70f66738f65"
+  sha256 "03e15c75b1d71a265b9c063fa0e6d3327d7a919ce922e8e4ae167788ebd3d1ba"
   
   
   livecheck do
