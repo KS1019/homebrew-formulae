@@ -14,13 +14,7 @@ cask "eikana" do
     strategy :github_latest
   end
   
-  caveats do
-
-  end
-  
-  if hasCodeSignTool
-    caveats "Self signing #{@cask.name}.app with codesign tool"
-  else
+  if not hasCodeSignTool
     caveats do
       unsigned_accessibility
     end
