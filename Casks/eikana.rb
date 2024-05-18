@@ -16,7 +16,7 @@ cask "eikana" do
   
   caveats do
     if hasCodeSignTool
-      caveats "Self signing #{@eikana#name}.app with codesign tool"
+      "Self signing #{@eikana#name}.app with codesign tool"
     else
       unsigned_accessibility
     end
