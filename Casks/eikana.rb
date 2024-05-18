@@ -21,7 +21,9 @@ cask "eikana" do
   if hasCodeSignTool
     caveats "Self signing #{@cask.name}.app with codesign tool"
   else
-    caveats unsigned_accessibility
+    caveats do
+      unsigned_accessibility
+    end
   end
   
   depends_on macos: ">= :sonoma"
