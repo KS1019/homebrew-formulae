@@ -11,7 +11,7 @@ cask "eikana" do
     strategy :github_latest
   end
 
-  caveats "#{name} is not notarized and will delete com.apple.quarantine attribute automatically during the installation."
+  caveats "#{token} is not notarized and will delete 'com.apple.quarantine' attribute automatically during the installation."
   
   depends_on macos: ">= :sonoma"
   
