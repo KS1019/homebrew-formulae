@@ -17,7 +17,7 @@ cask "eikana" do
   
   app "eikana.app"
 
-  def post_flight
+  postflight do
     system "xattr -d com.apple.quarantine #{appdir}/eikana.app"
   end
 end
