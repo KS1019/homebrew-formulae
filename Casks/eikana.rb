@@ -26,7 +26,7 @@ cask "eikana" do
 
   bundleId = "jp.cmd.eikan"
   uninstall_preflight do
-    system "osascript -e 'quit app \"#{name}\"'"
+    system "osascript -e 'quit app \"#{token}\"'"
     system "tccutil reset Accessibility #{bundleId}"
   end
 end
