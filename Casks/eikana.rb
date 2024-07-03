@@ -24,9 +24,8 @@ cask "eikana" do
     system "xattr -d com.apple.quarantine #{appdir}/eikana.app"
   end
 
-  bundleId = "jp.cmd.eikan"
   uninstall_preflight do
     system "osascript -e 'quit app \"#{token}\"'"
-    system "tccutil reset Accessibility #{bundleId}"
+    system "tccutil reset Accessibility jp.cmd.eikan"
   end
 end
