@@ -12,6 +12,9 @@ cask "eikana" do
   end
 
   caveats "#{token} is not notarized and will delete 'com.apple.quarantine' attribute automatically during the installation."
+  caveats do
+    unsigned_accessibility
+  end
   
   depends_on macos: ">= :sonoma"
   
@@ -19,5 +22,11 @@ cask "eikana" do
 
   postflight do
     system "xattr -d com.apple.quarantine #{appdir}/eikana.app"
+  end
+
+  bundleId = "jp.cmd.eikan"
+  uninstall_preflight do
+    system "osascript -e 'quit app \"#{name}\"'"
+    system "tccutil reset Accessibility #{bundleId}"
   end
 end
