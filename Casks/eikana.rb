@@ -22,6 +22,7 @@ cask "eikana" do
 
   postflight do
     system "xattr -d com.apple.quarantine #{appdir}/eikana.app"
+    system "codesign -f -s - --deep #{appdir}/eikana.app"
   end
 
   uninstall_preflight do
