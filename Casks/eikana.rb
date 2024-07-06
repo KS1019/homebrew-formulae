@@ -1,10 +1,10 @@
 cask "eikana" do
-  version "0.0.5"
+  version "0.0.6"
   url "https://github.com/KS1019/eikana/releases/download/#{version}/eikana.zip"
   name "eikana"
   desc "Input Mode Switcher for Japanese and English / USキーボードで日英入力切り替えを行うアプリ"
   homepage "https://github.com/KS1019/eikana"
-  sha256 "2745a1d5ce68d6e1897ab4e84b21563d9efe54094e515b81885dc7b029fbb307"
+  sha256 "19f56afb49086ffc060a90a0f077698b5fe4ce11270a5b3f12bd7c745935f523"
   
   livecheck do
     url :url
